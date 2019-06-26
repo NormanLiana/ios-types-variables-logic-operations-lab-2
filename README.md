@@ -1,4 +1,4 @@
-# Types Variables Logic and Operations Lab 2
+# Types Variables Logic or Operations Lab 2
 
 ## Instructions for lab submission
 
