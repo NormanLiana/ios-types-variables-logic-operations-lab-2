@@ -1,4 +1,4 @@
-# Types Variables Logic or Operations Lab 2
+# Types Variables Logic and Operations Lab 2
 
 ## Instructions for lab submission
 
@@ -19,8 +19,14 @@ Print `"above average"` if your grade is greater than the class average or `"bel
 var grade1 = 7.0
 var grade2 = 9.0
 var grade3 = 5.0
+var myGrade:Double = 8.0
+var average = (grade1 + grade2 + grade3 + myGrade) / 4
 
-// your code here
+if average < myGrade {
+print("above average")
+} else {
+print("below average")
+}
 ```
 
 ***
@@ -31,7 +37,11 @@ You are given a number. Print even if the number is even or odd otherwise.
 ```swift
 let number = 2
 
-// your code here
+if number % 2 == 0 {
+print("even")
+} else {
+print("odd")
+}
 ```
 
 ***
@@ -43,7 +53,11 @@ You are given two numbers `a` and `b`. Print `"divisible"` if `a` is divisible b
 var a = 12
 var b = 3
 
-// code here
+if a % b == 0 {
+print("divisible")
+} else {
+print("not divisible")
+}
 ```
 
 ***
@@ -56,7 +70,12 @@ var a = 2
 var b = 3
 var c = 2
 
-// your code here
+if a == b || a == c || b == c {
+print("At least two variables have the same value")
+} else {
+print ("All the values are different")
+}
+
 ```
 
 ***
@@ -65,10 +84,24 @@ var c = 2
 You are working on a smart-fridge. The smart-fridge knows how old the eggs and bacon in it are. You know that eggs spoil after 3 weeks (21 days) and bacon after one week (7 days). Given `baconAge` and `eggsAge` (both in days) determine if you can cook bacon and eggs, or which ingredients you need to throw out. If you can cook bacon and eggs, print `"you can cook bacon and eggs"`. If you need to throw out any ingredients, for each one print a line with the text `"throw out"` + bacon or eggs.
 
 ```swift
-var baconAge = 6 // the bacon is 6 days old
-var eggsAge = 12 // eggs are 12 days old
+// the bacon is 6 days old
+// eggs are 12 days old
 
-// your code here
+var baconAge = 6
+var eggsAge = 12
+var badBacon = 7
+var badEggs = 21
+
+if baconAge <= badBacon && eggsAge <= badEggs {
+print("you can cook bacon and eggs")
+} else if baconAge > badBacon && eggsAge > badEggs {
+print("throw out eggs and bacon")
+}else if baconAge > badBacon {
+print("throw out bacon")
+} else if eggsAge > badEggs {
+print("throw out eggs")
+}
+
 ```
 
 ***
@@ -80,7 +113,16 @@ The above rule is valid except that every 100 years special rules apply. Years t
 ```swift
 let year = 2014
 
-// your code here
+if year % 400 == 0 {
+print("Leap year!")
+} else if year % 100 == 0 {
+print("Not a leap year!")
+} else if year % 4 == 0 {
+print ("Leap year!")
+} else {
+print("Not a leap year")
+}
+
 ```
 
 ***
@@ -91,7 +133,11 @@ If you use `random()` it will give you a random number within a specified range.
 ```swift
 let randomNum = Int.random(in: 0...100)
 
-// your code here
+if randomNum % 2 == 0 {
+print("heads")
+} else {
+print("tails")
+}
 ```
 
 Hint: use an if/else block along with the `%` operator
@@ -107,7 +153,17 @@ var b = 6
 var c = 3
 var d = 4
 
-// your code here
+if a < b && a < c && a < d{
+print(a)
+} else if b < a && b < c && b < d {
+print(b)
+} else if c < a && c < b && c < d {
+print(c)
+} else if d < a && d < b && d < c {
+print(d)
+}
+
+
 ```
 
 ***
